@@ -4,6 +4,8 @@ from django.utils.timezone import datetime
 
 class Produto(models.Model):
     nome = models.CharField(max_length=20)
+    descricao = models.TextField(default='Descreva sobre seu produto')
+    quantidade = models.IntegerField(default=0)
     data = models.DateField(default=datetime.now)
     # texto = models.TextField()
 
